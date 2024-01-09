@@ -21,7 +21,7 @@ function analytics(value) {
 
 let short = ""
 async function sendRequest() {
-  const a = 'http://localhost:3000/url/'
+  const a = 'https://url-shortner-rishabs-projects-f4158a5e.vercel.app/url/'
   axios.post(a, {
     url: link
   })
@@ -44,7 +44,7 @@ async function sendRequest() {
 
 
 async function sendanalytics() {
-  const a = `http://localhost:3000/analytics/${shortid}`
+  const a = `https://url-shortner-rishabs-projects-f4158a5e.vercel.app/analytics/${shortid}`
   await axios.get(a, {
   })
     .then(function (response) {
