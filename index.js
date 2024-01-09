@@ -34,7 +34,7 @@ app.get('/url/:shortId', async (req, res)=>{
             }
         }
     );
-    
+    // await URL.deleteMany({})
         res.redirect(entry.redirectURL)
 })
 
