@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vadodara District Court – Interactive Map</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .court-map {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .court-block {
+      background: #fff;
+      border: 2px solid #dee2e6;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .court-block:hover {
+      background: #0d6efd;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .court-block small {
+      color: #6c757d;
+    }
+
+    .legend {
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .legend div {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center mt-4">
+    <h2 class="fw-bold">Vadodara District Court – 3rd Floor Layout</h2>
+    <p class="text-muted">Click on any block to view judge name, court type, and direction details.</p>
+
+    <div class="court-map">
+      <div class="court-block" data-info="A1 - Empty Room (Under Maintenance)">
+        <h5>A1</h5>
+        <small>Empty</small>
+      </div>
+      <div class="court-block" data-info="A8 - S.C Makwana (Civil Court)">
+        <h5>A8</h5>
+        <small>Judge: S.C Makwana</small>
+      </div>
+      <div class="court-block" data-info="A9 - Civil Judge J.D. Room">
+        <h5>A9</h5>
+        <small>Judge Room</small>
+      </div>
+      <div class="court-block" data-info="A10 - Family Court Record Section">
+        <h5>A10</h5>
+        <small>Records</small>
+      </div>
+
+      <div class="court-block" data-info="B1 - Criminal Court No. 4">
+        <h5>B1</h5>
+        <small>Criminal Division</small>
+      </div>
+      <div class="court-block" data-info="B2 - Vacant Room">
+        <h5>B2</h5>
+        <small>Vacant</small>
+      </div>
+      <div class="court-block" data-info="B3 - Fast Track Court">
+        <h5>B3</h5>
+        <small>Fast Track</small>
+      </div>
+      <div class="court-block" data-info="B4 - Civil Judge Senior Division">
+        <h5>B4</h5>
+        <small>Senior Division</small>
+      </div>
+
+      <div class="court-block" data-info="C1 - Staff Room">
+        <h5>C1</h5>
+        <small>Staff</small>
+      </div>
+      <div class="court-block" data-info="C2 - Computer Section">
+        <h5>C2</h5>
+        <small>Tech</small>
+      </div>
+      <div class="court-block" data-info="C3 - Mediation Center">
+        <h5>C3</h5>
+        <small>Mediation</small>
+      </div>
+      <div class="court-block" data-info="C4 - Judge's Library">
+        <h5>C4</h5>
+        <small>Library</small>
+      </div>
+    </div>
+
+    <div class="legend text-start">
+      <h5>📍 Direction Key</h5>
+      <div><strong>A Block:</strong> North Wing (Civil Courts)</div>
+      <div><strong>B Block:</strong> East Wing (Criminal Division)</div>
+      <div><strong>C Block:</strong> South Wing (Administrative Sections)</div>
+      <div><strong>D Block:</strong> West Wing (Family & Records)</div>
+    </div>
+  </div>
+  <!-- Visitor Counter Section -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h3 class="fw-bold mb-3">👥 Visitors to This Website</h3>
+    <p class="text-muted mb-1">Thank you for exploring legal insights here!</p>
+    
+    <div 
+      id="visitor-count" 
+      class="fs-1 fw-bold text-primary shadow-sm border border-2 border-primary d-inline-block px-4 py-2 rounded-3 mt-3"
+    >
+      0
+    </div>
+
+    <p class="text-secondary mt-2">Visitors since October 2025</p>
+  </div>
+</section>
+
+<script>
+  // Use localStorage to simulate visitor count
+  const countEl = document.getElementById("visitor-count");
+
+  // Retrieve existing count (or start from a random number for demo)
+  let count = localStorage.getItem("visitorCount");
+  if (!count) {
+    count = 120; // starting visitors
+  }
+
+  // Increment count only once per user session
+  if (!sessionStorage.getItem("visited")) {
+    count++;
+    localStorage.setItem("visitorCount", count);
+    sessionStorage.setItem("visited", "true");
+  }
+
+  countEl.textContent = count;
+</script>
+
+
+  <script>
+    const blocks = document.querySelectorAll(".court-block");
+    blocks.forEach((block) => {
+      block.addEventListener("click", () => {
+        alert(block.dataset.info);
+      });
+    });
+  </script>
+</body>
+</html>

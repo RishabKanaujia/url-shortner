@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vadodara Court Room Seating Plan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f9fafb;
+        color: #222;
+        font-family: "Poppins", sans-serif;
+      }
+      .section-title {
+        color: #003366;
+        font-weight: 700;
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+      .floor-card {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      .search-box {
+        border-radius: 10px;
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        width: 100%;
+        max-width: 400px;
+      }
+      .result-box {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+        padding: 10px;
+        display: none;
+      }
+      .result-item {
+        padding: 8px 10px;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      .result-item:hover {
+        background-color: #eef4ff;
+      }
+      .highlight {
+        color: #003366;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-warning" href="index.html"
+          ><i class="bi bi-balance-scale"></i> Law Hub</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bareact.html">Bare Acts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="judgement.html">Judgements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="article.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vadodara-court.html">Vadodara-Court</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-5">
+      <h1 class="text-center mb-4" style="color: #003366; font-weight: 700">
+        Vadodara District Court Room Seating Plan
+      </h1>
+
+      <!-- 🔍 Search Section -->
+      <div class="text-center mb-4">
+        <input
+          type="text"
+          id="searchBox"
+          class="search-box"
+          placeholder="Search Judge by Name..."
+          onkeyup="searchJudge()"
+        />
+        <div id="resultBox" class="result-box"></div>
+      </div>
+
+      <!-- 🔽 Search Result Display -->
+      <div id="selectedResult" class="text-center mb-5"></div>
+
+      <!-- 🧾 Floor Wise Display -->
+      <div class="floor-card">
+        <h4 class="section-title">Ground Floor (A)</h4>
+        <p>
+          A1 - <br />
+          A8 - S.C. Makwana <br />
+          A9 - B.K. Dasondi <br />
+          A17 - S.K. Sharma <br />
+          A21 - R.A. Agrawal <br />
+          A32 - S.M. Mishra <br />
+          A33 - A.G. Dodiya <br />
+          A45 - P.B. Nayak (Chief Court) <br />
+          A56 - J.V. Shah <br />
+          A59 - B.M. Raj (1st Court) <br />
+          A69 - (Second Court) <br />
+          A85 - (4th Court) <br />
+          A95 - N.J. Kothariya (Traffic Court) <br />
+          A96 - R. Agrawal (Municipal Court) <br />
+          A106 - (Third Court)
+        </p>
+      </div>
+
+      <div class="floor-card">
+        <h4 class="section-title">First Floor (B)</h4>
+        <p>
+          B6 - S.N. Solanki <br />
+          B7 - D.K. Soni <br />
+          B15 - C.M. Pawar <br />
+          B29 - Principal District Judge <br />
+          B44 - A.S. Shaikh <br />
+          B57 - I.S. Saiyad <br />
+          B58 - N.B. Sharma <br />
+          B68 - S.R. Ahluja <br />
+          B77 - Bandhan Nagi <br />
+          B87 - Saumya Rai <br />
+          B88 - S.D. Kapadia <br />
+          B96 - T.H. Thakkar
+        </p>
+      </div>
+
+      <div class="floor-card">
+        <h4 class="section-title">Second Floor (C)</h4>
+        <p>
+          C1 - Priyanka Agrawal <br />
+          C6 - M.H. Padhiyar <br />
+          C9 - M.A. Tailor <br />
+          C18 - B.P. Patel <br />
+          C24 - A.K. Shah <br />
+          C32 - P.V. Bhatt <br />
+          C35 - G.J. Thoriya <br />
+          C42 - P.N. Raval <br />
+          C49 - M.M. Qureshi <br />
+          C61 - P.K. Gadhvi <br />
+          C62 - R.B. Gosai <br />
+          C70 - S.P. Dulera <br />
+          C77 - D.P. Shah <br />
+          C84 - L.M. Parmar <br />
+          C87 - B.P. Mahida <br />
+          C92 - P. Rathore
+        </p>
+      </div>
+
+      <div class="floor-card">
+        <h4 class="section-title">Third Floor (D)</h4>
+        <p>
+          D1 - J.J. Bhatt (Principal Senior Civil) <br />
+          D8 - J.A. Parmar <br />
+          D9 - M.D. Valani <br />
+          D17 - M.B. Mehta <br />
+          D19 - Dr. Rahul Karnani <br />
+          D30 - K.B. Rathod <br />
+          D38 - A.A. Shaikh <br />
+          D48 - Shilpa Sayal <br />
+          D45 - R.V. Raje (Family Court No. 2) <br />
+          D57 - B.S. Shah (Family Court No. 3) <br />
+          D58 - S.C. Vyas (Family Court No. 4) <br />
+          D62 - R.S. Rajput (Family Court No. 5) <br />
+          D73 - Y.R. Agrawal <br />
+          D80 - Kavita Gehlot <br />
+          D81 - Chitra Ratnoo (Family Court No. 6) <br />
+          D88 - M.M. Patel (Family Court No. 1)
+        </p>
+      </div>
+
+      <div class="floor-card">
+        <h4 class="section-title">Fourth Floor (E)</h4>
+        <p>
+          E1 - T.J. Patel (Small Cause Court) <br />
+          E8 - H.J. Thakar (Small Cause Court) <br />
+          E9 - S.P. Patel (Small Cause Court) <br />
+          E16 - D.J. Rajput <br />
+          E18 - Rahul Sachdeva <br />
+          E29 - D.M. Singhal <br />
+          E30 - M.R. Zala <br />
+          E37 - Punam Swami <br />
+          E54 - J.M. Solanki <br />
+          E55 - R.M. Shaikh <br />
+          E64 - G.G. Parmar <br />
+          E73 - B.S. Rana
+        </p>
+      </div>
+    </div>
+     <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold text-warning">📜 Law Portal</h5>
+            <p class="small">
+              Explore Bare Acts, Judgments & Articles in simple language.
+            </p>
+            <p class="small mb-0">
+              &copy; 2025 Law Portal. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6 class="fw-bold text-warning">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-light text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="articles.html" class="text-light text-decoration-none"
+                  >Articles</a
+                >
+              </li>
+              <li>
+                <a href="judgments.html" class="text-light text-decoration-none"
+                  >Judgments</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-light text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6 class="fw-bold text-warning">Follow</h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary" />
+        <div class="text-center small text-muted">
+          Made with ❤️ for Law Students & Legal Enthusiasts |
+          <a href="privacy.html" class="text-decoration-none text-light"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const judges = {
+        "S.C. Makwana": "A8 (Ground Floor)",
+        "B.K. Dasondi": "A9 (Ground Floor)",
+        "S.K. Sharma": "A17 (Ground Floor)",
+        "R.A. Agrawal": "A21 (Ground Floor)",
+        "S.M. Mishra": "A32 (Ground Floor)",
+        "A.G. Dodiya": "A33 (Ground Floor)",
+        "P.B. Nayak": "A45 (Ground Floor)",
+        "J.V. Shah": "A56 (Ground Floor)",
+        "B.M. Raj": "A59 (Ground Floor)",
+        "N.J. Kothariya": "A95 (Ground Floor)",
+        "C.M. Pawar": "B15 (First Floor)",
+        "A.S. Shaikh": "B44 (First Floor)",
+        "S.N. Solanki": "B6 (First Floor)",
+        "S.R. Ahluja": "B68 (First Floor)",
+        "Priyanka Agrawal": "C1 (Second Floor)",
+        "M.H. Padhiyar": "C6 (Second Floor)",
+        "A.K. Shah": "C24 (Second Floor)",
+        "P.V. Bhatt": "C32 (Second Floor)",
+        "M.M. Qureshi": "C49 (Second Floor)",
+        "A.A. Shaikh": "D38 (Third Floor)",
+        "Shilpa Sayal": "D48 (Third Floor)",
+        "R.V. Raje": "D45 (Third Floor)",
+        "B.S. Shah": "D57 (Third Floor)",
+        "S.C. Vyas": "D58 (Third Floor)",
+        "R.S. Rajput": "D62 (Third Floor)",
+        "Y.R. Agrawal": "D73 (Third Floor)",
+        "Chitra Ratnoo": "D81 (Third Floor)",
+        "T.J. Patel": "E1 (Fourth Floor)",
+        "H.J. Thakar": "E8 (Fourth Floor)",
+        "S.P. Patel": "E9 (Fourth Floor)",
+        "D.J. Rajput": "E16 (Fourth Floor)",
+        "Rahul Sachdeva": "E18 (Fourth Floor)",
+        "D.M. Singhal": "E29 (Fourth Floor)",
+        "Punam Swami": "E37 (Fourth Floor)",
+      };
+
+      function searchJudge() {
+        const input = document.getElementById("searchBox").value.toLowerCase();
+        const resultBox = document.getElementById("resultBox");
+        const selectedResult = document.getElementById("selectedResult");
+
+        resultBox.innerHTML = "";
+        selectedResult.innerHTML = "";
+        resultBox.style.display = "none";
+
+        if (input.length === 0) return;
+
+        const matches = Object.keys(judges).filter((name) =>
+          name.toLowerCase().includes(input)
+        );
+
+        if (matches.length > 0) {
+          resultBox.style.display = "block";
+          matches.forEach((name) => {
+            const item = document.createElement("div");
+            item.className = "result-item";
+            item.textContent = name;
+            item.onclick = function () {
+              selectedResult.innerHTML = `<div class="highlight">${name}</div> → ${judges[name]}`;
+              resultBox.style.display = "none";
+              document.getElementById("searchBox").value = name;
+            };
+            resultBox.appendChild(item);
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

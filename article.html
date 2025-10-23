@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | Law Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Header Section */
+      .page-header {
+        background: linear-gradient(135deg, #001f3f, #004085);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .page-header h1 {
+        font-weight: 700;
+      }
+      .page-header p {
+        font-size: 1.1rem;
+        color: #dbe4ff;
+      }
+
+      /* Article Cards */
+      .article-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        padding: 25px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .article-title {
+        color: #002b5b;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .article-meta {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+
+      .tag {
+        display: inline-block;
+        background: #e9f2ff;
+        color: #004085;
+        padding: 4px 12px;
+        border-radius: 25px;
+        font-size: 0.8rem;
+        margin-right: 6px;
+      }
+
+      .read-btn {
+        align-self: flex-start;
+        background-color: #004085;
+        color: white;
+        border-radius: 25px;
+        padding: 8px 18px;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+      }
+
+      .read-btn:hover {
+        background-color: #002b5b;
+      }
+
+      footer {
+        background: #001f3f;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-warning" href="index.html"
+          ><i class="bi bi-balance-scale"></i> Law Hub</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bareact.html">Bare Acts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="judgement.html">Judgements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="article.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vadodara-court.html">Vadodara-Court</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="page-header">
+      <h1>Legal Articles & Insights</h1>
+      <p>Read simplified explanations, analysis & opinions on key laws</p>
+    </div>
+
+    <!-- Articles Section -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- Article 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="article-card">
+            <div>
+              <h5 class="article-title">Understanding the Right to Information Act</h5>
+              <p class="article-meta">🕒 Aug 2025 | 📚 Constitutional Law</p>
+              <p>
+                RTI empowers citizens to seek info from public authorities — promoting transparency and accountability.
+              </p>
+              <div>
+                <span class="tag">Transparency</span>
+                <span class="tag">Governance</span>
+              </div>
+            </div>
+            <a href="#" class="read-btn mt-3">Read Full Article</a>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="article-card">
+            <div>
+              <h5 class="article-title">Bailable vs Non-Bailable Offences Explained</h5>
+              <p class="article-meta">🕒 Jul 2025 | 📚 Criminal Law</p>
+              <p>
+                Know how bail provisions differ based on the seriousness of an offence — simplified with examples.
+              </p>
+              <div>
+                <span class="tag">Criminal Law</span>
+                <span class="tag">Bail</span>
+              </div>
+            </div>
+            <a href="#" class="read-btn mt-3">Read Full Article</a>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="article-card">
+            <div>
+              <h5 class="article-title">AI & Law: The Future of Legal Practice</h5>
+              <p class="article-meta">🕒 Jun 2025 | 📚 Technology Law</p>
+              <p>
+                Artificial Intelligence is reshaping contracts, research, and even judicial predictions. Here’s how.
+              </p>
+              <div>
+                <span class="tag">AI</span>
+                <span class="tag">Legal Tech</span>
+              </div>
+            </div>
+            <a href="#" class="read-btn mt-3">Read Full Article</a>
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="article-card">
+            <div>
+              <h5 class="article-title">Contract Law: Offer, Acceptance, and Consideration</h5>
+              <p class="article-meta">🕒 May 2025 | 📚 Contract Law</p>
+              <p>
+                Understand the three pillars of a valid contract — in simple words with real examples.
+              </p>
+              <div>
+                <span class="tag">Contract</span>
+                <span class="tag">Business Law</span>
+              </div>
+            </div>
+            <a href="#" class="read-btn mt-3">Read Full Article</a>
+          </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="article-card">
+            <div>
+              <h5 class="article-title">Media Trials & the Right to Fair Justice</h5>
+              <p class="article-meta">🕒 Apr 2025 | 📚 Constitutional Law</p>
+              <p>
+                How far can media go in reporting a case before it starts influencing judicial fairness?
+              </p>
+              <div>
+                <span class="tag">Media</span>
+                <span class="tag">Justice</span>
+              </div>
+            </div>
+            <a href="#" class="read-btn mt-3">Read Full Article</a>
+          </div>
+        </div>
+
+        <!-- Article 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="article-card">
+            <div>
+              <h5 class="article-title">Cybersecurity & Legal Responsibility in India</h5>
+              <p class="article-meta">🕒 Mar 2025 | 📚 Cyber Law</p>
+              <p>
+                Explore how the IT Act and new data protection laws handle cybercrimes and privacy issues.
+              </p>
+              <div>
+                <span class="tag">Cyber Law</span>
+                <span class="tag">Privacy</span>
+              </div>
+            </div>
+            <a href="#" class="read-btn mt-3">Read Full Article</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <h5 class="fw-bold text-warning">📜 Law Portal</h5>
+            <p class="small">
+              Explore Bare Acts, Judgments & Articles in simple language.
+            </p>
+            <p class="small mb-0">
+              &copy; 2025 Law Portal. All Rights Reserved.
+            </p>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6 class="fw-bold text-warning">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-light text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="articles.html" class="text-light text-decoration-none"
+                  >Articles</a
+                >
+              </li>
+              <li>
+                <a href="judgments.html" class="text-light text-decoration-none"
+                  >Judgments</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-light text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h6 class="fw-bold text-warning">Follow</h6>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="text-light fs-4"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-secondary" />
+        <div class="text-center small text-muted">
+          Made with ❤️ for Law Students & Legal Enthusiasts |
+          <a href="privacy.html" class="text-decoration-none text-light"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
